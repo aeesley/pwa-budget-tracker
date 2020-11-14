@@ -39,8 +39,7 @@ Use the budget app on or offline to input withdrawals or deposits which will the
 [Github](https://github.com/aeesley/pwa-budget-tracker)
 
 ## Screenshot
-![Homepage](./fitness-tracker-homepage.png)
-![Stats](./nosql-workout-tracker-stats.png)
+![Homepage](./budget-tracker-homepage.png)
 
 ## Technology
 Mongo, Mongoose, Github, Node, JQuery, Express, Atlas, Heroku, HTML, CSS etc.
