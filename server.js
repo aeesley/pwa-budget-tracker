@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/budget", {
+mongoose.connect("mongodb+srv://User:Password@cluster0.mfasv.mongodb.net/Cluster0?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
