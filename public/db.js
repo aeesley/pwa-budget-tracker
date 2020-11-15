@@ -41,13 +41,10 @@ function checkDatabase() {
   const store = transaction.objectStore("pending");
   // get all records from store and set to a variable
   const getAll = store.getAll();
-  console.log('check db get all', getAll)
 
   getAll.onsuccess = function() {
-    console.log('success working!!!')
     if (getAll.result.length > 0) {
 
-    console.log('our index dbpeeps ??', JSON.stringify(getAll.result))
       fetch("/api/transaction/bulk", {
         method: "POST",
         body: JSON.stringify(getAll.result),
@@ -58,7 +55,6 @@ function checkDatabase() {
       })
       .then(response => response.json())
       .then(() => {
-        console.log('HIT SPOT TO DO CLEAR INDEXDB')
         // if successful, open a transaction on your pending db
         const transaction = db.transaction(["pending"], "readwrite");
 
